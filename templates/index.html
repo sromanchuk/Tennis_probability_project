@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis probability project</title>
+
+</head>
+<body>
+<form action="results" method="post">
+    <h3>Enter tennis players names:</h3>
+    <input type="text" id="name1" name="name1"><br>
+    <input type="text" id="name2" name="name2"><br>
+    <input type="text" id="type" name="type"><br>
+    <br><input class="btn-primary" type="submit" value="Calculate probability">
+    {% block error %}
+    {% endblock %}
+</form>
+</body>
+</html>
