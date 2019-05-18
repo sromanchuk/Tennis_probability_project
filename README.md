@@ -34,25 +34,25 @@ In the 2 stage you could find functional system requirements, non-functional sys
 ### Опис тестових прикладів для первірки працездатності програми. ###
 * Перше вікно
 
-![first_window_example](https://user-images.githubusercontent.com/47135579/57969765-a60ba080-7982-11e9-880f-8b940fde94f6.png)
+![first_window_example](https://user-images.githubusercontent.com/47135579/57972131-38ba3880-799f-11e9-84ef-8fc3d1c02468.png)
 
 * Друге вікно(виведений результат неробочий, це лише приклад)
 
-![second_window_example](https://user-images.githubusercontent.com/47135579/57971580-aadb4f00-7998-11e9-84af-518d04499026.png)
+![second_window_example](https://user-images.githubusercontent.com/47135579/57972137-466fbe00-799f-11e9-8864-d17678529116.png)
 
 ### Структура програми з коротким описом модулів, функцій, класів та методів. ###
 Модуль 
 
 Цей модуль є досить великим і він складає основну базу нашої програми. У ньому ми опрацьовуємо всю інформацію надану нам Sportradar API. 
 * get_json(source) - повертає json словники за ссилкою;
-* matches_from_tournaments(file) - повертає інформацію про матчі різних турнірів;
-* player_profile(id, rankings_path) - повертає потрібну інформацію про профілі тенісистів;
-* surface_stats(data) - повертає типи кортів;
+* matches_from_tournaments(file) - повертає id матчів різних турнірів;
+* player_profile(id, rankings_path) - повертає потрібну інформацію про тенісистів;
+* surface_stats(data) - повертає відсоток виграшів на різних типах кортів;
 * rank(id, rankings) - повертає рейтинги тенісистів;
-* previous_encounters(id1, id2, date) - вираховує відсоток перемог в попередніх матчах тих самих гравців;
+* previous_encounters(id1, id2, date) - вираховує відсоток перемог в попередніх матчах тих самих гравців зо відбувались до заданої дати;
 * rankings(gender) - повертає список із рейтингами;
 * tournaments(file, gender) - повертає список із турнірами. 
 
 Модуль MatchesADT.py
 
-Цей модуль містить абстрактний клас Matches. Це є клас на основі АТД стек, у нього заносяться id матчів. Методи: **add** - додає новий елемент до стеку; **pop** - видаляє та повертає елемент зі стеку; **is_empty** - повертає булевий вираз, в залежності від того чи стек пустий; **__len__** - повертає довжину стеку; **process_match**- працює із останнім елементом у стеку і повертає список із цих елементів: name id, name id, match id, ranking, surface performance, previous matches agains same opponent.  
+Цей модуль містить абстрактний клас Matches. Це є клас на основі АТД стек, у нього заносяться id матчів. Методи: **add** - додає новий елемент до стеку; **pop** - видаляє та повертає елемент зі стеку; **is_empty** - повертає булевий вираз, в залежності від того чи стек пустий; **__len__** - повертає довжину стеку; **process_match**- працює із останнім елементом у стеку і повертає список із цих елементів: player id, name, player id, name, match id, ranking, surface performance, previous matches agains same opponent.  
