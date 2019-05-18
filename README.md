@@ -28,3 +28,13 @@ In the 2 stage you could find functional system requirements, non-functional sys
   5 крок: натиснути кнопку "Calculate probability".
   
   6 крок: якщо всі попередні кроки були реалізовані, то на екрані вашого пристрою буде висвітлена наступна сторінка із результатом.
+  
+### Опис тестових прикладів для первірки працездатності програми. ###
+* Перше вікно
+
+![first_window_example](https://user-images.githubusercontent.com/47135579/57969765-a60ba080-7982-11e9-880f-8b940fde94f6.png)
+
+* Друге вікно 
+
+
+
