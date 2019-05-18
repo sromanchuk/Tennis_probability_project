@@ -1,2 +1,9 @@
-xmltodict
+http.client
+json
+time
+datetime
+pandas
+__future__
+numpy
+TensorFlow
 flask
