@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis probability project</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+    <link rel="icon" href="../static/css/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<form class="form-inline" action="results" method="post">
+    <span class="gender"><b>Choose gender of tennis players</b></span>
+    <span class="type"><b>choose type of court</b></span>
+    <input placeholder="First tennis player" type="text" class="name1" list="name1" name="name1" data-input aria-autocomplete="both">
+        <datalist id="name1">
+            <option value="﻿Djokovic Novak">
+            <option value="Nadal Rafael">
+            <option value="Federer Roger">
+            <option value="Thiem Dominic">
+            <option value="Zverev Alexander">
+            <option value="Nishikori Kei">
+            <option value="Tsitsipas Stefanos">
+            <option value="Anderson Kevin">
+            <option value="Del Potro Juan Martin">
+            <option value="Cilic Marin">
+            <option value="Isner John">
+            <option value="Fognini Fabio">
+            <option value="Khachanov Karen">
+            <option value="Medvedev Daniil">
+            <option value="Coric Borna">
+            <option value="Monfils Gael">
+            <option value="Raonic Milos">
+            <option value="Basilashvili Nikoloz">
+            <option value="Cecchinato Marco">
+            <option value="Bautista-Agut Roberto">
+            <option value="Pella Guido">
+            <option value="Shapovalov Denis">
+            <option value="Goffin David">
+            <option value="Schwartzman Diego">
+            <option value="Pouille Lucas">
+            <option value="de Minaur Alex">
+            <option value="Edmund Kyle">
+            <option value="Simon Gilles">
+            <option value="Wawrinka Stan">
+            <option value="Auger Aliassime Felix">
+            <option value="Lajovic Dusan">
+            <option value="Djere Laslo">
+            <option value="Berrettini Matteo">
+            <option value="Tiafoe Frances">
+            <option value="Garin Christian">
+            <option value="Kyrgios Nick">
+            <option value="Fucsovics Marton">
+            <option value="Verdasco Fernando">
+            <option value="Gasquet Richard">
+            <option value="Herbert Pierre-Hugues">
+            <option value="Hurkacz Hubert">
+            <option value="Chardy Jeremy">
+            <option value="Carreno-Busta Pablo">
+            <option value="Albot Radu">
+            <option value="Norrie Cameron">
+            <option value="Paire Benoit">
+            <option value="Kukushkin Mikhail">
+            <option value="Dimitrov Grigor">
+            <option value="Cuevas Pablo">
+            <option value="Mannarino Adrian">
+            <option value="Struff Jan-Lennard">
+            <option value="Fritz Taylor">
+            <option value="Opelka Reilly">
+            <option value="Ebden Matthew">
+            <option value="Munar Clar Jaume Antoni">
+            <option value="Kohlschreiber Philipp">
+            <option value="Millman John">
+            <option value="Dzumhur Damir">
+            <option value="Johnson Steve">
+            <option value="Klizan Martin">
+            <option value="Querrey Sam">
+            <option value="Humbert Ugo">
+            <option value="Mcdonald Mackenzie">
+            <option value="Haase Robin">
+            <option value="Seppi Andreas">
+            <option value="Mayer Leonardo">
+            <option value="Sonego Lorenzo">
+            <option value="Thompson Jordan">
+            <option value="Krajinovic Filip">
+            <option value="Berankis Ricardas">
+            <option value="Jarry Nicolas">
+            <option value="Sousa Joao">
+            <option value="Londero Juan Ignacio">
+            <option value="Gulbis Ernests">
+            <option value="Nishioka Yoshihito">
+            <option value="Ruud Casper">
+            <option value="Bedene Aljaz">
+            <option value="Delbonis Federico">
+            <option value="Rublev Andrey">
+            <option value="Kudla Denis">
+            <option value="Copil Marius">
+            <option value="Gojowczyk Peter">
+            <option value="Evans Daniel">
+            <option value="Kecmanovic Miomir">
+        </datalist>
+    <br>
+    <div id="versus">VS</div>
+    <input placeholder="Second tennis player" type="text" class="name2" list="name2" name="name2" data-input aria-autocomplete="both">
+        <datalist id="name2">
+            <option value="﻿Djokovic Novak">
+            <option value="Nadal Rafael">
+            <option value="Federer Roger">
+            <option value="Thiem Dominic">
+            <option value="Zverev Alexander">
+            <option value="Nishikori Kei">
+            <option value="Tsitsipas Stefanos">
+            <option value="Anderson Kevin">
+            <option value="Del Potro Juan Martin">
+            <option value="Cilic Marin">
+            <option value="Isner John">
+            <option value="Fognini Fabio">
+            <option value="Khachanov Karen">
+            <option value="Medvedev Daniil">
+            <option value="Coric Borna">
+            <option value="Monfils Gael">
+            <option value="Raonic Milos">
+            <option value="Basilashvili Nikoloz">
+            <option value="Cecchinato Marco">
+            <option value="Bautista-Agut Roberto">
+            <option value="Pella Guido">
+            <option value="Shapovalov Denis">
+            <option value="Goffin David">
+            <option value="Schwartzman Diego">
+            <option value="Pouille Lucas">
+            <option value="de Minaur Alex">
+            <option value="Edmund Kyle">
+            <option value="Simon Gilles">
+            <option value="Wawrinka Stan">
+            <option value="Auger Aliassime Felix">
+            <option value="Lajovic Dusan">
+            <option value="Djere Laslo">
+            <option value="Berrettini Matteo">
+            <option value="Tiafoe Frances">
+            <option value="Garin Christian">
+            <option value="Kyrgios Nick">
+            <option value="Fucsovics Marton">
+            <option value="Verdasco Fernando">
+            <option value="Gasquet Richard">
+            <option value="Herbert Pierre-Hugues">
+            <option value="Hurkacz Hubert">
+            <option value="Chardy Jeremy">
+            <option value="Carreno-Busta Pablo">
+            <option value="Albot Radu">
+            <option value="Norrie Cameron">
+            <option value="Paire Benoit">
+            <option value="Kukushkin Mikhail">
+            <option value="Dimitrov Grigor">
+            <option value="Cuevas Pablo">
+            <option value="Mannarino Adrian">
+            <option value="Struff Jan-Lennard">
+            <option value="Fritz Taylor">
+            <option value="Opelka Reilly">
+            <option value="Ebden Matthew">
+            <option value="Munar Clar Jaume Antoni">
+            <option value="Kohlschreiber Philipp">
+            <option value="Millman John">
+            <option value="Dzumhur Damir">
+            <option value="Johnson Steve">
+            <option value="Klizan Martin">
+            <option value="Querrey Sam">
+            <option value="Humbert Ugo">
+            <option value="Mcdonald Mackenzie">
+            <option value="Haase Robin">
+            <option value="Seppi Andreas">
+            <option value="Mayer Leonardo">
+            <option value="Sonego Lorenzo">
+            <option value="Thompson Jordan">
+            <option value="Krajinovic Filip">
+            <option value="Berankis Ricardas">
+            <option value="Jarry Nicolas">
+            <option value="Sousa Joao">
+            <option value="Londero Juan Ignacio">
+            <option value="Gulbis Ernests">
+            <option value="Nishioka Yoshihito">
+            <option value="Ruud Casper">
+            <option value="Bedene Aljaz">
+            <option value="Delbonis Federico">
+            <option value="Rublev Andrey">
+            <option value="Kudla Denis">
+            <option value="Copil Marius">
+            <option value="Gojowczyk Peter">
+            <option value="Evans Daniel">
+            <option value="Kecmanovic Miomir">
+        </datalist>
+    <br>
+
+<!--    <input type="text" id="gender" name="gender"><br>-->
+    <select class="custom-select my-1 mr-sm-2" id="gender" name="gender">
+        <option selected>Choose...</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+    </select>
+<!--    <input type="text" id="type" name="type"><br>-->
+    <select class="custom-select my-1 mr-sm-2" id="type" name="type">
+        <option selected>Choose...</option>
+        <option value="indoor hard">Indoor Hard</option>
+        <option value="outdoor hard">Outdoor Hard</option>
+        <option value="clay">Clay</option>
+        <option value="grass">Grass</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-light btn-lg button2">Calculate probability</button>
+</form>
+</body>
+</html>
