@@ -41,7 +41,7 @@ In the 2 stage you could find functional system requirements, non-functional sys
 ![second_window_example](https://user-images.githubusercontent.com/47135579/57972137-466fbe00-799f-11e9-8864-d17678529116.png)
 
 ### Структура програми з коротким описом модулів, функцій, класів та методів. ###
-Модуль 
+Модуль neural_network.py
 
 Цей модуль представляє собою реалізацію нейронної мережі. 
 
