@@ -50,4 +50,4 @@ if __name__ == "__main__":
     print("Accuracy", accuracy)
     print(model.predict(pd.DataFrame.from_dict({"ranking": [0.8], "surface": [0.35], "previous": [0.5]})))
 
-    model.save("women_tennis.h5")
+    model.save("test_model.h5")

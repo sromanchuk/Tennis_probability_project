@@ -4,6 +4,7 @@ import datetime
 from keras.models import load_model
 from keras.utils import CustomObjectScope
 from keras.initializers import glorot_uniform
+from keras.backend import clear_session
 import pandas as pd
 
 
@@ -61,6 +62,8 @@ def predict_match(ranking, surface, previous, gender):
     with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
         model = load_model(path)
     prediction = model.predict(pd.DataFrame.from_dict({"ranking": [ranking], "surface": [surface], "previous": [previous]}))
+
+    clear_session()
 
     return int((1 - prediction[0][0]) * 100)
 
