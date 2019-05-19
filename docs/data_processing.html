@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>data_processing module &#8212; Tennis probability project 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../modules/docs/build/html/_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../modules/docs/build/html/_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../modules/docs/build/html/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../modules/docs/build/html/_static/jquery.js"></script>
+    <script type="text/javascript" src="../modules/docs/build/html/_static/underscore.js"></script>
+    <script type="text/javascript" src="../modules/docs/build/html/_static/doctools.js"></script>
+    <script type="text/javascript" src="../modules/docs/build/html/_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../modules/docs/build/html/genindex.html" />
+    <link rel="search" title="Search" href="../modules/docs/build/html/search.html" />
+   
+  <link rel="stylesheet" href="../modules/docs/build/html/_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-data_processing">
+<span id="data-processing-module"></span><h1>data_processing module<a class="headerlink" href="#module-data_processing" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="data_processing.get_json">
+<code class="descclassname">data_processing.</code><code class="descname">get_json</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.get_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str) -&gt; dict
+Get json data from api.sportradar.us with given link.
+:param source: link
+:return: dictionary</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.matches_from_tournaments">
+<code class="descclassname">data_processing.</code><code class="descname">matches_from_tournaments</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.matches_from_tournaments" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str) -&gt; list
+Get matches from tournaments file.
+:param file: path
+:return: list of match ids</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.player_profile">
+<code class="descclassname">data_processing.</code><code class="descname">player_profile</code><span class="sig-paren">(</span><em>id</em>, <em>rankings_path</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.player_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str, str) -&gt; list
+Get information about player.
+:param id: player id
+:param rankings_path: path of rankings file
+:return: list</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.previous_encounters">
+<code class="descclassname">data_processing.</code><code class="descname">previous_encounters</code><span class="sig-paren">(</span><em>id1</em>, <em>id2</em>, <em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.previous_encounters" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str, str, datetime.datetime) -&gt; float
+Get performance statistics during previous encounters of 2 player before given date.
+:param id1: first player
+:param id2: second player
+:param date: datetime object
+:return: winrate</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.rank">
+<code class="descclassname">data_processing.</code><code class="descname">rank</code><span class="sig-paren">(</span><em>id</em>, <em>rankings</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.rank" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str, list) -&gt; int
+Return rank of player by id.
+:param id: player id
+:param rankings: rankings list
+:return: player rank</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.rankings">
+<code class="descclassname">data_processing.</code><code class="descname">rankings</code><span class="sig-paren">(</span><em>gender</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.rankings" title="Permalink to this definition">¶</a></dt>
+<dd><p>(str) -&gt; lst
+:param gender: 0 for female rankings, 1 for male rankings
+:return: list containing rankings</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.surface_stats">
+<code class="descclassname">data_processing.</code><code class="descname">surface_stats</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.surface_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>(dict) -&gt; dict
+Get surface performance statistics from given player data.
+:param data: player dict
+:return: dict of surface performances</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="data_processing.tournaments">
+<code class="descclassname">data_processing.</code><code class="descname">tournaments</code><span class="sig-paren">(</span><em>gender</em><span class="sig-paren">)</span><a class="headerlink" href="#data_processing.tournaments" title="Permalink to this definition">¶</a></dt>
+<dd><p>(int) -&gt; dict
+Get tournaments for given gender.
+:param gender: 0 for females, 1 for males
+:return: dict</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../modules/docs/build/html/index.html">Tennis probability project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../modules/docs/build/html/index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../modules/docs/build/html/search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Danylo Nazaruk, Sofia Romanchuk.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../modules/docs/build/html/_sources/rst/data_processing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
