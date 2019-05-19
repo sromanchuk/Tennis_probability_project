@@ -43,7 +43,7 @@ In the 2 stage you could find functional system requirements, non-functional sys
 ### Структура програми з коротким описом модулів, функцій, класів та методів. ###
 Модуль neural_network.py
 
-Цей модуль представляє собою реалізацію нейронної мережі. Він знаходиться у пакеті neural_network.
+Цей модуль представляє собою реалізацію нейронної мережі. Він знаходиться у пакеті neural_network. Для тренування нейронної мережі ми використовуємо файли men_dataset.csv та women_dataset.csv. За допомогою них створюються збережені моделі men_tennis.h5 та women_tennis.h5. Модель, що використовується для передбачення, обирається відповідно до статі гравців.
 
 Модуль data_processing.py
 
@@ -60,9 +60,9 @@ In the 2 stage you could find functional system requirements, non-functional sys
 Модуль process_match.py
 
 Цей модуль був створений для того, щоб перетворити введені на сайті на такі, що зможе сприймати нейронна мережа. Знаходиться у пакеті modules.
-* preprocess(player1, player2, type, gender) - 
-* predict_match(ranking, surface, previous, gender) - 
-* process_match(player1, player2, type, gender) - 
+* preprocess(player1, player2, type, gender) - обробляє дані отримані з веб застосунку;
+* predict_match(ranking, surface, previous, gender) - передбачає результат матчу;
+* process_match(player1, player2, type, gender) - обробляє дані та передбачає результат матчу.
 
 Модуль MatchesADT.py
 
