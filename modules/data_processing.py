@@ -35,7 +35,7 @@ def rankings(gender):
     ranking_list = []
 
     for rank in ranking:
-        ranking_list.append((rank["rank"], rank["player"]["id"], rank["player"]["name"]))
+        ranking_list.append((rank["rank"], rank["player"]["id"], rank["player"]["name"].replace(",", "")))
 
     return ranking_list
 

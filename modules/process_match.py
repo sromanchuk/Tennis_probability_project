@@ -18,7 +18,6 @@ def preprocess(player1, player2, type, gender):
     :param gender: gender of players
     :return: list
     """
-    player1, player2 = ", ".join(player1.split()), ", ".join(player2.split())
     gender = 1 if gender == "male" else 0
     r = rankings(gender)
     type = type.capitalize()
