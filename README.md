@@ -3,21 +3,21 @@
 Sofiya Romanchuk and Danylo Nazaruk 
 # Description #
 Tennis_probability_project is a course work from the course "Programming fundamentals". 
-The theme of this project is "Probability of winning of certain player in given tennis match". You can find more information on wiki. Our project is now in progress. Its idea is to calculate the formula to count the probability of the winning of particular tennis player against his opponent in tennis match.
-In the Wiki you are able to find the 1st stage and later the rest 4 stages of my project, each lasts 2 weeks. And the last, fifth one will end on 12.05.2019. There you could also find weekly reports. All the information in Wiki is on ukrainian.
+The theme of this project is "Probability of winning of certain player in given tennis match". You can find more information on wiki. Our project is now finished. Its idea is to create the neural network to calculate the probability of the winning of particular tennis player against his opponent in tennis match.
+In the Wiki you are able to find all the stages of my project. And the last, fifth one will end on 12.05.2019. There you could also find weekly reports. All the information in Wiki is in Ukrainian.
 In the 1 stage you could find the theme, system requirements, description of this course work, description of the functionality of the API and the weekly reports.
 In the 2 stage you could find functional system requirements, non-functional system requirements, description of the input data, description of the capabilities of modules, module packages, libraries that will be used to work with data in the program, description of the organization of group work on the project.
 ### Призначення та коротка характеристика програми ###
-Ця програма призначена для визначення імовірного переможця тенісного турніру за заданими користувачем параметрами. 
+Ця програма призначена для визначення імовірного переможця тенісного матчу за заданими користувачем параметрами. 
 
-Вхідні дані програми: ім'я першого тенісного гравця, ім'я другого тенісного гравця, тип корту та стать обох гравців. Вибір тенісиста/тенісистки обмежується рейтингом топ 446 ATP для чоловіків та топ 392 WTA для жінок. 4 типи корту на вибір - outdoor hard, indoor hard, clay, grass. Статі - female/male.
+Вхідні дані програми: ім'я першого тенісного гравця, ім'я другого тенісного гравця, тип корту та стать обох гравців. Вибір тенісиста/тенісистки обмежується рейтингом топ 501 ATP для чоловіків та топ 500 WTA для жінок. 4 типи корту на вибір - outdoor hard, indoor hard, clay, grass. Статі - female/male.
 
-Вихідні дані: ім'я тенісиста, який імовірно виграє, вирахуваний відсоток із яким він імовірно переможе, ім'я імовірно переможеного та тип корту, на якому повинен бути проведенй матч.
+Вихідні дані: ім'я першого тенісиста, вирахуваний шанс його перемоги, ім'я другого тенісиста та тип корту, на якому повинен бути проведенй матч.
 
 Користувач отримує інформацію про те, хто ж імовірно із двох попередньо введених тенісистів буде переможцем тенісного матчу. 
 
 ### Коротка інструкція по користуванню програмою ###
-Потрібно відкрити пакет web_app та відкрити файл flask_example.py. Потім натиснути run і ви побачите посилання. Перейшовши за ним здійснюйте наступні кроки:
+Потрібно відкрити пакет web_app та відкрити файл web_app.py. Потім натиснути run і ви побачите посилання. Перейшовши за ним здійснюйте наступні кроки:
 
   1 крок: вибрати із 2 поточних заданих варіантів 1 для статі - female/male. 
   
@@ -53,7 +53,7 @@ In the 2 stage you could find functional system requirements, non-functional sys
 * player_profile(id, rankings_path) - повертає потрібну інформацію про тенісистів;
 * surface_stats(data) - повертає відсоток виграшів на різних типах кортів;
 * rank(id, rankings) - повертає рейтинги тенісистів;
-* previous_encounters(id1, id2, date) - вираховує відсоток перемог в попередніх матчах тих самих гравців зо відбувались до заданої дати;
+* previous_encounters(id1, id2, date) - вираховує відсоток перемог в попередніх матчах тих самих гравців що відбувались до заданої дати;
 * rankings(gender) - повертає список із рейтингами;
 * tournaments(file, gender) - повертає список із турнірами. 
 
@@ -66,4 +66,4 @@ In the 2 stage you could find functional system requirements, non-functional sys
 
 Модуль MatchesADT.py
 
-Цей модуль містить абстрактний клас Matches. Це є клас на основі АТД стек, у нього заносяться id матчів. Методи: **add** - додає новий елемент до стеку; **pop** - видаляє та повертає елемент зі стеку; **is_empty** - повертає булевий вираз, в залежності від того чи стек пустий; **__len__** - повертає довжину стеку; **process_match**- працює із останнім елементом у стеку і повертає список із цих елементів: player id, name, player id, name, match id, ranking, surface performance, previous matches agains same opponent.  
+Цей модуль містить абстрактний клас Matches. Це є клас на основі АТД стек, у нього заносяться id матчів. Методи: **add** - додає новий елемент до стеку; **pop** - видаляє та повертає елемент зі стеку; **is_empty** - повертає булевий вираз, в залежності від того чи стек пустий; **__len__** - повертає довжину стеку; **process_match**- працює із останнім елементом у стеку і повертає список із цих елементів: player id, name, player id, name, match id, ranking, surface performance, previous matches agains same opponent; **from_file** - добавляє у стек id з вказаного файлу; **process_and_write** - обробляє всі id зі стеку та записує у вказаний файл.
