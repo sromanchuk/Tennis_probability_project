@@ -22,7 +22,7 @@ setup(
         "Markdown==3.1.1",
         "MarkupSafe==1.1.1",
         "mock==3.0.5",
-        "numpy==1.16.3",
+        "numpy==1.22.0",
         "pandas==0.24.2",
         "protobuf==3.7.1",
         "python-dateutil==2.8.0",
